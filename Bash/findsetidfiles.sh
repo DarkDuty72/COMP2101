@@ -30,8 +30,7 @@ echo "Thats all"
 #sudo du -ah / 2>/dev/null | sort -n -r | head -n 12
 #sudo du -ah -type f -executable -perm -4000 -ls 2>/dev/null | sort -n -r | head -n 12
 
-
-
+#
 
 # for the task, add
 # commands to display a title
