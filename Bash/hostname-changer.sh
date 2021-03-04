@@ -39,13 +39,20 @@ echo $z
 #e.g. sed -i "s/$oldname/$newname/" /etc/hosts
 
 
-sed -i "s/$x/$z/" /etc/hosts
+#old sed -i "s/$x/$z/" /etc/hosts
 
+
+(sudo sed -i "s/$x/$z/" /etc/hosts && echo "changed hostname to: $z")
 
 
 # If that hostname is not the current hostname, change it using the hostnamectl command and
 #     tell the user you changed the current hostname and they should reboot to make sure the new name takes full effect
 #e.g. hostnamectl set-hostname $newname
-echo "the hostname has been changed"
-hostnamectl set-hostname $z
-echo "you need to reboot to make sure the new name takes full effect"
+
+
+#echo "the hostname has been changed"
+#hostnamectl set-hostname $z
+#echo "you need to reboot to make sure the new name takes full effect"
+
+
+(sudo hostnamectl set-hostname $z && echo "current hostname has been changed. you need to reboot to make sure the new name takes full effect ")
